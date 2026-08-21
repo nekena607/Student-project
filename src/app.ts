@@ -5,7 +5,7 @@ import authRoutes from './routes/authRoutes.ts';
 import authMiddleware from './middlewares/authMiddleware';
 import errorHandler from './middlewares/errorHandler';
 const app: Express = express();
-app.use(cors());;
+app.use(cors());
 app.use(express.json());
 app.use('/auth', authRoutes);
 app.use('/etudiants', authMiddleware, studentRoutes);

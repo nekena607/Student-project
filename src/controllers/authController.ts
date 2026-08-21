@@ -7,7 +7,7 @@ const login = async (req: Request, res: Response, next: NextFunction): Promise<v
     } catch (err: unknown) {
         next(err);
     }
-}
+};
 export default {
     login,
 };
