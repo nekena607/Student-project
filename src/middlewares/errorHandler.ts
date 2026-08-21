@@ -7,3 +7,5 @@ const errorHandler = (err: Error | AppError, req: Request, res: Response, next: 
     const message = err instanceof AppError ? err.message : 'Erreur interne du serveur';
     res.status(statusCode).json({ error: message })
 };
+
+export default errorHandler;
