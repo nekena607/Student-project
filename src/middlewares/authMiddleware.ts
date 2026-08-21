@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwtUtils from '../utils/jwt';
-import { AppError } from '../services/studentService';
+import { AppError } from '../utils/AppError';
 const authMiddleware = (req: Request, res: Response, next: NextFunction): void => {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer ')) {

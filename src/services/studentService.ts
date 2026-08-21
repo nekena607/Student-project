@@ -1,14 +1,6 @@
 import studentRepository from '../repositories/studentRepository';
 import { Student, StudentInput } from '../types/student';
-
-export class AppError extends Error {
-    statusCode: number;
-
-    constructor(message: string, statusCode: number) {
-        super(message);
-        this.statusCode = statusCode;
-    }
-}
+import { AppError } from '../utils/AppError';
 
 const getAllStudents = async (): Promise<Student[]> => {
     return studentRepository.findAll();
@@ -63,5 +55,4 @@ export default {
     createStudent,
     updateStudent,
     deleteStudent,
-    AppError,
 };

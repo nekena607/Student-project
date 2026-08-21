@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import jwtUtils from '../utils/jwt';
 import { LoginInput } from '../types/auth';
-import { AppError } from './studentService';
+import { AppError } from '../utils/AppError';
 const login = async ({ email, password }: LoginInput): Promise<string> => {
     const adminEmail = process.env.ADMIN_EMAIL;
     const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
