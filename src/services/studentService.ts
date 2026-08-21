@@ -28,7 +28,7 @@ const createStudent = async (data: StudentInput): Promise<Student> => {
     if (!first_name || !last_name || !email) {
         throw new AppError('first_name, last_name et email sont obligatoires', 400);
     }
-    if (age !== undefined && age !== null && (isNaN(age) || age < 0)) {
+    if (age !== undefined && age !== null && (typeof age !== 'number' || isNaN(age) || age < 0)) {
         throw new AppError("L'âge doit être un nombre positif", 400);
     }
 
