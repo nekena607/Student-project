@@ -5,5 +5,5 @@ const errorHandler = (err: Error | AppError, req: Request, res: Response, next: 
     console.error(err);
     const statusCode = err instanceof AppError ? err.statusCode : 500;
     const message = err instanceof AppError ? err.message : 'Erreur interne du serveur';
-    res.status(statusCode).json({ error: message });
+    res.status(statusCode).json({ error: message })
 };
