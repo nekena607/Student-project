@@ -19,4 +19,4 @@ const login = async ({ email, password }: LoginInput): Promise<string> => {
 };
 export default {
     login,
-};
+}

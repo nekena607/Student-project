@@ -17,5 +17,5 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction): void =
     } catch (err: unknown) {
         next(new AppError('Token invalide ou expiré', 401));
     }
-};
+}
 export default authMiddleware;

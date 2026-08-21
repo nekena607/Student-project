@@ -11,4 +11,5 @@ const verifyToken = (token: string): AuthPayload => {
 export default {
     generateToken,
     verifyToken,
-};
+}
+;
