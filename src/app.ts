@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/etudiants', studentRoutes);
 
 app.get('/', (req: Request, res: Response) => {
-    res.json({ message: 'API Etudiants opérationnelle 🚀' });
+    res.json({ message: 'API Etudiants opérationnelle ' });
 });
 
 app.use(errorHandler);

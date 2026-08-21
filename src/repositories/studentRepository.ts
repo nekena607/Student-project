@@ -21,9 +21,7 @@ const create = async ({ first_name, last_name, email, age }: StudentInput): Prom
     return result.rows[0];
 };
 
-const update = async (
-    id: string | number,
-    { first_name, last_name, email, age }: StudentInput
+const update = async (id: string | number,{ first_name, last_name, email, age }: StudentInput
 ): Promise<Student | undefined> => {
     const result = await pool.query(
         `UPDATE etudiants
